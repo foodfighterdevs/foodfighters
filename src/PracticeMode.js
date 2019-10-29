@@ -17,7 +17,9 @@ class PracticeMode extends React.Component {
 						Health
 					</div>
 				</div>
-				<div id="key-prompt">Q</div>
+				<div id="prompt-holder">
+					<div id="key-prompt">Q</div>
+				</div>
 				<div id="player" className="area">
 					<div className="special-move">Special Move</div>
 					<div id="player-sprite" className="sprite">
