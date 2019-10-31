@@ -1,4 +1,5 @@
 import React from "react";
+import "./PracticeMode.css";
 
 class PracticeMode extends React.Component {
 	constructor(props) {

@@ -1,0 +1,37 @@
+#user-login {
+	/* border: 2px solid red; */
+	display: inline-block;
+	/* vertical-align: middle; */
+	padding: 219px 0;
+}
+
+#email-holder {
+	/* border: 2px solid blue; */
+}
+
+#password-holder {
+	/* border: 2px solid green; */
+}
+#register-login-container {
+	padding-top: 10px;
+	font-size: 80%;
+}
+
+#register-link {
+	/* float: left; */
+	/* margin-top: 10px; */
+	font-size: 100%;
+	float: left;
+}
+
+#login-button {
+	/* float: right; */
+	/* margin-top: 10px; */
+	font-size: 100%;
+	float: right;
+}
+
+input {
+	/* display: block; */
+	padding: 5px;
+}
