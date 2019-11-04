@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d7fdf6b5d2915fd3c8ad6a2d3c18ddc1b912c30e
 import React from 'react'
 import Player from './components/player'
 
@@ -9,10 +12,13 @@ import
   Route,
   Link
 } from "react-router-dom"
+<<<<<<< HEAD
 =======
 import React from "react";
 import "./PracticeMode.css";
 >>>>>>> Added login page boilerplate
+=======
+>>>>>>> d7fdf6b5d2915fd3c8ad6a2d3c18ddc1b912c30e
 
 class PracticeMode extends React.Component {
 	constructor(props) {
