@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Player from './components/player'
 
@@ -8,6 +9,10 @@ import
   Route,
   Link
 } from "react-router-dom"
+=======
+import React from "react";
+import "./PracticeMode.css";
+>>>>>>> Added login page boilerplate
 
 class PracticeMode extends React.Component {
 	constructor(props) {
