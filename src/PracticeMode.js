@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d7fdf6b5d2915fd3c8ad6a2d3c18ddc1b912c30e
 import React from 'react'
-import Player from './components/player'
+import Player from './components/Player'
+import "./PracticeMode.css";
 
 import
 {
@@ -12,20 +9,16 @@ import
   Route,
   Link
 } from "react-router-dom"
-<<<<<<< HEAD
-=======
-import React from "react";
-import "./PracticeMode.css";
->>>>>>> Added login page boilerplate
-=======
->>>>>>> d7fdf6b5d2915fd3c8ad6a2d3c18ddc1b912c30e
 
-class PracticeMode extends React.Component {
-	constructor(props) {
+class PracticeMode extends React.Component
+{
+	constructor(props)
+	{
 		super(props);
 		this.state = { something: null };
 	}
-	render() {
+	render()
+	{
 		return (
 			<div>
 				<div id="enemy" className="area">
@@ -70,4 +63,4 @@ class PracticeMode extends React.Component {
 	}
 }
 
-export default PracticeMode;
+export default PracticeMode

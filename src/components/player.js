@@ -1,24 +1,19 @@
 import React from 'react'
+import { Bar, applyChange } from './HealthBar'
 
 class Player extends React.Component
 {
 	constructor(props)
 	{
 		super(props)
-		this.takeDamage = this.takeDamage.bind(this)
-		this.state = { currentHealth: 100 }
-	}
-
-	takeDamage(currentHealth)
-	{
-		this.setState(currentHealth)
+		this.sate = { data: null }
 	}
 
 	render()
 	{
 		return (
 			<div id="player">
-				<Health current={this.state.currentHealth} damage={10} click={this.takeDamage}/>
+				<Health />
 				<Image />
 				<Special />
 			</div>
@@ -26,36 +21,21 @@ class Player extends React.Component
 	}
 }
 
-function Health(props)
+function Health()
 {
-	let current = 100
-
-	return (
-		<div class="health-box" onClick={() => props.click(Math.round(props.current * (100 / props.damage)))}>
-			<div class="health-bar-red"></div>
-			<div class="health-bar-blue"></div>
-			<div class="health-bar"></div>
-			<div class="health-bar-text"></div>
-		</div>
-	)
+	return <Bar click={() => applyChange(-18)} />
 }
 
 function Image(props)
 {
-	let effect = ''
+	//let effect = ""
 
-	return (
-		<img href="not found.jpg" alt="Your Dish!" />
-	)
+	return <img href="not found.jpg" alt="Your Dish!" />
 }
 
 function Special(props)
 {
-	return (
-		<div>
-			SPECIAL
-		</div>
-	)
+	return <div>SPECIAL</div>
 }
 
-export default Player
+export default { Player }
