@@ -2,13 +2,13 @@ import React from 'react'
 import Player from './components/Player'
 import "./PracticeMode.css";
 
-import
-{
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom"
+// import
+// {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom"
 
 class PracticeMode extends React.Component
 {
@@ -32,8 +32,8 @@ class PracticeMode extends React.Component
 				</div>
 				<div id="prompt-holder">
 					{/* <div id="key-prompt"><a href="/sandbox/bar_test.html">Q</a></div> */}
-					<div id="key-prompt">
-						<Router>
+					<div id="key-prompt">Q
+						{/* <Router>
 							<Link to="/sandbox/bar_test.html">Q</Link>
 
 							<Switch>
@@ -45,7 +45,7 @@ class PracticeMode extends React.Component
 									
 								</Route>
 							</Switch>
-						</Router>
+						</Router> */}
 					</div>
 				</div>
 				<div id="player" className="area">

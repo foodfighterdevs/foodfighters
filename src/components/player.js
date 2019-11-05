@@ -6,7 +6,7 @@ class Player extends React.Component
 	constructor(props)
 	{
 		super(props)
-		this.sate = { data: null }
+		this.state = { data: null }
 	}
 
 	render()
@@ -30,12 +30,12 @@ function Image(props)
 {
 	//let effect = ""
 
-	return <img href="not found.jpg" alt="Your Dish!" />
+	return <img href="not found.jpg" alt="" />
 }
 
 function Special(props)
 {
-	return <div>SPECIAL</div>
+	return <div></div>
 }
 
-export default { Player }
+export default Player
