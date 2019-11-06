@@ -1,6 +1,6 @@
 #prompt-holder {
 	width: 100px;
-	padding: 70px;
+	padding: 40px;
 	border: 2px solid red;
 	margin: 0 auto;
 }
@@ -14,12 +14,12 @@
 }
 
 #enemy {
-	width: 80%;
+	width: 100px;
 	display: inline-block;
 }
 
 #player {
-	width: 80%;
+	width: 100px;
 	display: inline-block;
 }
 

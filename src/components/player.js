@@ -1,16 +1,16 @@
 import React from "react";
-import { Bar, applyChange } from "./HealthBar";
+import Bar from "./HealthBar.js";
 
 class Player extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { data: null };
+		this.state = { name: this.props.name };
 	}
 
 	render() {
 		return (
-			<div id="player">
-				<Health />
+			<div>
+				<Bar />
 				{/* <Image />
 				<Special /> */}
 			</div>
@@ -18,9 +18,9 @@ class Player extends React.Component {
 	}
 }
 
-function Health() {
-	return <Bar click={() => applyChange(-18)} />;
-}
+// function Health() {
+// 	return <Bar onClick/>;
+// }
 
 function Image(props) {
 	//let effect = ""
