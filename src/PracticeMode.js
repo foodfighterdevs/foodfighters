@@ -30,6 +30,7 @@ class PracticeMode extends React.Component {
 				<div id="prompt-holder">
 					{/* <div id="key-prompt"><a href="/sandbox/bar_test.html">Q</a></div> */}
 					<div id="key-prompt">
+						Q
 						{/* <Router>
 							<Link to="/sandbox/bar_test.html">Q</Link>
 
