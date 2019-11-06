@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
-import PracticeMode from "./PracticeMode"
+import PracticeMode from "./PracticeMode";
 
-function App()
-{
+function App() {
 	return (
 		<div className="App">
 			<header className="App-header">

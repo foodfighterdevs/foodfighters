@@ -1,41 +1,35 @@
-import React from 'react'
-import { Bar, applyChange } from './HealthBar'
+import React from "react";
+import { Bar, applyChange } from "./HealthBar";
 
-class Player extends React.Component
-{
-	constructor(props)
-	{
-		super(props)
-		this.sate = { data: null }
+class Player extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { data: null };
 	}
 
-	render()
-	{
+	render() {
 		return (
 			<div id="player">
 				<Health />
-				<Image />
-				<Special />
+				{/* <Image />
+				<Special /> */}
 			</div>
-		)
+		);
 	}
 }
 
-function Health()
-{
-	return <Bar click={() => applyChange(-18)} />
+function Health() {
+	return <Bar click={() => applyChange(-18)} />;
 }
 
-function Image(props)
-{
+function Image(props) {
 	//let effect = ""
 
-	return <img href="not found.jpg" alt="Your Dish!" />
+	return <img href="not found.jpg" alt="Your Dish!" />;
 }
 
-function Special(props)
-{
-	return <div>SPECIAL</div>
+function Special(props) {
+	return <div>SPECIAL</div>;
 }
 
-export default { Player }
+export default Player;
