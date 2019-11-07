@@ -56,7 +56,7 @@ class PracticeMode extends React.Component {
 				</div>
 				<div id="prompt-holder">
 					<div id="key-prompt">
-						<KeyPrompt changeHealth={this.change_enemy_health} />
+						<KeyPrompt changeEnemyHealth={this.change_enemy_health} changePlayerHealth={this.change_player_health}/>
 					</div>
 				</div>
 				<div id="player" className="area">
