@@ -8,6 +8,7 @@ class KeyPrompt extends React.Component {
 		this.countdown();
 	}
 	countdown() {
+		this.setState({ letterShown: 3 });
 		setTimeout(() => {
 			this.setState({ letterShown: 2 });
 			setTimeout(() => {
@@ -24,6 +25,7 @@ class KeyPrompt extends React.Component {
 		// Happens to be secure against users matching countdown numbers
 		if (e.key.toUpperCase() === this.state.letterShown) {
 			this.props.changeHealth(-18);
+			this.countdown();
 		}
 	}
 	render() {
