@@ -5,7 +5,6 @@ class KeyPrompt extends React.Component {
 		super(props);
 		this.state = { letterArray: ["A", "B", "C", "D"], letterShown: 3 };
 		// Starts the first countdown prompt
-		// this.handleKeyPress();
 		this.countdown();
 	}
 	countdown() {
@@ -24,7 +23,7 @@ class KeyPrompt extends React.Component {
 	handle_prompt_press(e) {
 		// Happens to be secure against users matching countdown numbers
 		if (e.key.toUpperCase() === this.state.letterShown) {
-			alert("I have done the thing better");
+			this.props.changeHealth(-18);
 		}
 	}
 	render() {

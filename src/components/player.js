@@ -4,23 +4,24 @@ import Bar from "./HealthBar.js";
 class Player extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { name: this.props.name };
+		this.state = {
+			name: null
+		};
 	}
 
 	render() {
 		return (
 			<div>
-				<Bar />
+				<Bar
+					curHealth={this.props.curHealth}
+					maxHealth={this.props.maxHealth}
+				/>
 				<Image />
 				<Special />
 			</div>
 		);
 	}
 }
-
-// function Health() {
-// 	return <Bar onClick/>;
-// }
 
 function Image(props) {
 	//let effect = ""
