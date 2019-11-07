@@ -1,6 +1,6 @@
 #prompt-holder {
 	width: 100px;
-	padding: 40px;
+	padding: 20px;
 	border: 2px solid red;
 	margin: 0 auto;
 }
@@ -14,17 +14,17 @@
 }
 
 #enemy {
-	width: 100px;
+	width: 125px;
 	display: inline-block;
 }
 
 #player {
-	width: 100px;
+	width: 125px;
 	display: inline-block;
 }
 
 .area {
-	padding: 45px;
+	padding: 15px;
 	border: 2px solid red;
 }
 
@@ -35,8 +35,8 @@
 
 .sprite {
 	border: 2px solid white;
-	width: 100px;
-	height: 100px;
+	width: 125px;
+	height: 125px;
 	margin: 0 auto;
 }
 

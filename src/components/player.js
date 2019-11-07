@@ -11,8 +11,8 @@ class Player extends React.Component {
 		return (
 			<div>
 				<Bar />
-				{/* <Image />
-				<Special /> */}
+				<Image />
+				<Special />
 			</div>
 		);
 	}
@@ -25,7 +25,12 @@ class Player extends React.Component {
 function Image(props) {
 	//let effect = ""
 
-	return <img href="not found.jpg" alt="Your Dish!" />;
+	return (
+		<img
+			src="https://caribvue.files.wordpress.com/2011/05/125x125.jpg"
+			alt="Your Dish!"
+		/>
+	);
 }
 
 function Special(props) {

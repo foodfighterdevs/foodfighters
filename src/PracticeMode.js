@@ -1,7 +1,7 @@
 import React from "react";
 import Player from "./components/Player.js";
 import "./PracticeMode.css";
-
+import KeyPrompt from "./KeyPrompt";
 class PracticeMode extends React.Component {
 	constructor(props) {
 		super(props);
@@ -13,19 +13,21 @@ class PracticeMode extends React.Component {
 				<div id="enemy" className="area">
 					<Player name="computer" />
 					{/* <div className="special-move">Special Move</div> */}
-					<div id="enemy-sprite" className="sprite">
+					{/* <div id="enemy-sprite" className="sprite">
 						Enemy Sprite
-					</div>
+					</div> */}
 				</div>
 				<div id="prompt-holder">
-					<div id="key-prompt">Q</div>
+					<div id="key-prompt">
+						<KeyPrompt />
+					</div>
 				</div>
 				<div id="player" className="area">
 					{/* <div className="special-move">Special Move</div> */}
 					<Player name="user" />
-					<div id="player-sprite" className="sprite">
-						{/* Player Sprite */}
-					</div>
+					{/* <div id="player-sprite" className="sprite">
+						Player Sprite
+					</div> */}
 				</div>
 			</div>
 		);
