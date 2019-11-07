@@ -21,7 +21,7 @@ class Bar extends React.Component {
 		let style = { width: perc };
 		return (
 			<div>
-				<div className="health-box" onClick={() => this.click(-18)}>
+				<div className="health-box">
 					<div className="health-bar-red" style={style}></div>
 					<div className="health-bar-blue" style={style}></div>
 					<div className="health-bar" style={style}></div>

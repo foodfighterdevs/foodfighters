@@ -19,6 +19,7 @@ class PracticeMode extends React.Component {
 			this.setState({
 				enemyCurHealth: 0
 			});
+			alert("Good job you beat a random number generator!");
 		} else {
 			this.setState({
 				enemyCurHealth: this.state.enemyCurHealth + modification
@@ -30,6 +31,7 @@ class PracticeMode extends React.Component {
 			this.setState({
 				playerCurHealth: 0
 			});
+			alert("You failed! You need to GIT GUD");
 		} else {
 			this.setState({
 				playerCurHealth: this.state.playerCurHealth + modification
@@ -56,7 +58,10 @@ class PracticeMode extends React.Component {
 				</div>
 				<div id="prompt-holder">
 					<div id="key-prompt">
-						<KeyPrompt changeEnemyHealth={this.change_enemy_health} changePlayerHealth={this.change_player_health}/>
+						<KeyPrompt
+							changeEnemyHealth={this.change_enemy_health}
+							changePlayerHealth={this.change_player_health}
+						/>
 					</div>
 				</div>
 				<div id="player" className="area">
