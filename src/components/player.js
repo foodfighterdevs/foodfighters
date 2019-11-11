@@ -1,5 +1,5 @@
-import React from "react";
-import Bar from "./HealthBar.js";
+import React from 'react';
+import Bar from './HealthBar.js';
 
 class Player extends React.Component {
 	constructor(props) {
@@ -26,12 +26,7 @@ class Player extends React.Component {
 function Image(props) {
 	//let effect = ""
 
-	return (
-		<img
-			src={props.sprite}
-			alt="Your Dish!"
-		/>
-	);
+	return <img src={props.sprite} alt="Your Dish!" />;
 }
 
 function Special(props) {
