@@ -16,7 +16,7 @@ class Player extends React.Component {
 					curHealth={this.props.curHealth}
 					maxHealth={this.props.maxHealth}
 				/>
-				<Image />
+				<Image sprite={this.props.sprite} />
 				<Special />
 			</div>
 		);
@@ -28,7 +28,7 @@ function Image(props) {
 
 	return (
 		<img
-			src="https://caribvue.files.wordpress.com/2011/05/125x125.jpg"
+			src={props.sprite}
 			alt="Your Dish!"
 		/>
 	);

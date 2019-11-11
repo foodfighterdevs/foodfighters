@@ -2,6 +2,9 @@ import React from "react";
 import Player from "./components/Player.js";
 import "./PracticeMode.css";
 import KeyPrompt from "./KeyPrompt";
+import pizza from "./pizza.png";
+import steak from "./steak.png";
+
 class PracticeMode extends React.Component {
 	constructor(props) {
 		super(props);
@@ -19,7 +22,6 @@ class PracticeMode extends React.Component {
 			this.setState({
 				enemyCurHealth: 0
 			});
-			alert("Good job you beat a random number generator!");
 		} else {
 			this.setState({
 				enemyCurHealth: this.state.enemyCurHealth + modification
@@ -31,7 +33,6 @@ class PracticeMode extends React.Component {
 			this.setState({
 				playerCurHealth: 0
 			});
-			alert("You failed! You need to GIT GUD");
 		} else {
 			this.setState({
 				playerCurHealth: this.state.playerCurHealth + modification
@@ -50,6 +51,7 @@ class PracticeMode extends React.Component {
 						name="enemy"
 						curHealth={enemyCurHealth}
 						maxHealth={enemyMaxHealth}
+						sprite={steak}
 					/>
 					{/* <div className="special-move">Special Move</div> */}
 					{/* <div id="enemy-sprite" className="sprite">
@@ -70,6 +72,7 @@ class PracticeMode extends React.Component {
 						name="player"
 						curHealth={playerCurHealth}
 						maxHealth={playerMaxHealth}
+						sprite={pizza}
 					/>
 					{/* <div id="player-sprite" className="sprite">
 						Player Sprite
