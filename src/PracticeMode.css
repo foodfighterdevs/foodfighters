@@ -1,7 +1,6 @@
 #prompt-holder {
 	width: 100px;
-	padding: 70px;
-	border: 2px solid red;
+	padding: 20px;
 	margin: 0 auto;
 }
 
@@ -14,18 +13,19 @@
 }
 
 #enemy {
-	width: 80%;
+	width: 125px;
 	display: inline-block;
+	transition: border 0.25s;
 }
 
 #player {
-	width: 80%;
+	width: 125px;
 	display: inline-block;
+	transition: border 0.25s;
 }
 
 .area {
-	padding: 45px;
-	border: 2px solid red;
+	padding: 15px;
 }
 
 .special-move {
@@ -35,8 +35,8 @@
 
 .sprite {
 	border: 2px solid white;
-	width: 100px;
-	height: 100px;
+	width: 125px;
+	height: 125px;
 	margin: 0 auto;
 }
 
