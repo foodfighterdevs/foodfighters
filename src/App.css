@@ -9,60 +9,10 @@
 .App-header {
 	background-color: #282c34;
 	min-height: 100vh;
-	/* flex-direction: column;
-	align-items: center;
-	justify-content: center; */
 	font-size: calc(10px + 2vmin);
 	color: white;
 }
 
 .App-link {
 	color: #09d3ac;
-}
-
-#prompt-holder {
-	width: 100px;
-	padding: 70px;
-	border: 2px solid red;
-	margin: 0 auto;
-}
-
-#key-prompt {
-	width: 50px;
-	height: 50px;
-	border: 2px solid white;
-	margin: 0 auto;
-	line-height: 42px;
-}
-
-#enemy {
-	width: 80%;
-	display: inline-block;
-}
-
-#player {
-	width: 80%;
-	display: inline-block;
-}
-
-.area {
-	padding: 45px;
-	border: 2px solid red;
-}
-
-.special-move {
-	position: absolute;
-	border: 2px solid blue;
-}
-
-.sprite {
-	border: 2px solid white;
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
-}
-
-.health {
-	position: absolute;
-	border: 2px solid blue;
 }
