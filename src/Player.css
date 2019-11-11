@@ -1,5 +1,4 @@
-.health-box
-{
+.health-box {
 	background-color: #ccc;
 	height: 30px;
 	width: 500px;
@@ -7,8 +6,7 @@
 	border: solid 1px #aaa;
 }
 
-.health-bar
-{
+.health-bar {
 	background-color: #007f00;
 	width: inherit;
 	height: 28px;
@@ -16,15 +14,13 @@
 	bottom: 56px;
 }
 
-.health-bar-red
-{
+.health-bar-red {
 	width: 100%;
 	height: 100%;
 	background-color: #cc0000;
 }
 
-.health-bar-blue
-{
+.health-bar-blue {
 	width: 100%;
 	height: 100%;
 	background-color: #3bd3df;
@@ -32,8 +28,7 @@
 	position: relative;
 }
 
-.health-bar-text
-{
+.health-bar-text {
 	position: relative;
 	bottom: 80px;
 }
