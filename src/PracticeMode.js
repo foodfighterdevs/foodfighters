@@ -18,6 +18,11 @@ class PracticeMode extends React.Component {
 		this.change_player_health = this.change_player_health.bind(this);
 	}
 	change_enemy_health(modification) {
+		document.getElementById('enemy').style.backgroundColor = 'red';
+		setTimeout(() => {
+			document.getElementById('enemy').style.backgroundColor = '#282c34';
+		}, 250); // Timeout must be as long as enemy border transition time
+
 		if (this.state.enemyCurHealth + modification <= 0) {
 			this.setState({
 				enemyCurHealth: 0
@@ -29,6 +34,10 @@ class PracticeMode extends React.Component {
 		}
 	}
 	change_player_health(modification) {
+		document.getElementById('player').style.backgroundColor = 'red';
+		setTimeout(() => {
+			document.getElementById('player').style.backgroundColor = '#282c34';
+		}, 250); // Timeout must be as long as player border transition time
 		if (this.state.playerCurHealth + modification <= 0) {
 			this.setState({
 				playerCurHealth: 0
@@ -53,30 +62,24 @@ class PracticeMode extends React.Component {
 						maxHealth={enemyMaxHealth}
 						sprite={steak}
 					/>
-					{/* <div className="special-move">Special Move</div> */}
-					{/* <div id="enemy-sprite" className="sprite">
-						Enemy Sprite
-					</div> */}
 				</div>
 				<div id="prompt-holder">
 					<div id="key-prompt">
 						<KeyPrompt
 							changeEnemyHealth={this.change_enemy_health}
 							changePlayerHealth={this.change_player_health}
+							enemyCurHealth={enemyCurHealth}
+							playerCurHealth={playerCurHealth}
 						/>
 					</div>
 				</div>
 				<div id="player" className="area">
-					{/* <div className="special-move">Special Move</div> */}
 					<Player
 						name="player"
 						curHealth={playerCurHealth}
 						maxHealth={playerMaxHealth}
 						sprite={pizza}
 					/>
-					{/* <div id="player-sprite" className="sprite">
-						Player Sprite
-					</div> */}
 				</div>
 			</div>
 		);
