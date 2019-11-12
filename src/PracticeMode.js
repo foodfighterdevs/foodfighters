@@ -16,69 +16,10 @@ class PracticeMode extends React.Component {
 			playerSpecial: 0,
 			enemySpecial: 0
 		};
-		this.onDeath = this.onDeath.bind(this);
-		this.onHit = this.onHit.bind(this);
 		this.change_enemy_health = this.change_enemy_health.bind(this);
 		this.change_player_health = this.change_player_health.bind(this);
 		this.usePlayerSpecial = this.usePlayerSpecial.bind(this);
 		this.useEnemySpecial = this.useEnemySpecial.bind(this);
-	}
-
-	onHit() {
-		let choice = Math.floor(Math.random() * 15) + 1; // 0.5 second to 1.5 seconds
-		switch (choice) {
-			case 1:
-				this.hit1.play();
-				break;
-			case 2:
-				this.hit2.play();
-				break;
-			case 3:
-				this.hit3.play();
-				break;
-			case 4:
-				this.hit4.play();
-				break;
-			case 5:
-				this.hit5.play();
-				break;
-			case 6:
-				this.hit6.play();
-				break;
-			case 7:
-				this.hit7.play();
-				break;
-			case 8:
-				this.hit8.play();
-				break;
-			case 9:
-				this.hit9.play();
-				break;
-			case 10:
-				this.hit10.play();
-				break;
-			case 11:
-				this.hit11.play();
-				break;
-			case 12:
-				this.hit12.play();
-				break;
-			case 13:
-				this.hit13.play();
-				break;
-			case 14:
-				this.hit14.play();
-				break;
-			case 15:
-				this.hit15.play();
-				break;
-			default:
-				this.hit1.play();
-		}
-	}
-
-	onDeath() {
-		this.death.play();
 	}
 
 	change_enemy_health(modification) {
