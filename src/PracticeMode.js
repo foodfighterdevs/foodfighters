@@ -2,32 +2,32 @@ import React from "react";
 import Player from "./components/Player.js";
 import "./PracticeMode.css";
 import KeyPrompt from "./KeyPrompt";
-import pizza from "./pizza.png";
-import steak from "./steak.png";
-import hit1 from "./slightscream-01.flac";
-import hit2 from "./slightscream-02.flac";
-import hit3 from "./slightscream-03.flac";
-import hit4 from "./slightscream-04.flac";
-import hit5 from "./slightscream-05.flac";
-import hit6 from "./slightscream-06.flac";
-import hit7 from "./slightscream-07.flac";
-import hit8 from "./slightscream-08.flac";
-import hit9 from "./slightscream-09.flac";
-import hit10 from "./slightscream-10.flac";
-import hit11 from "./slightscream-11.flac";
-import hit12 from "./slightscream-12.flac";
-import hit13 from "./slightscream-13.flac";
-import hit14 from "./slightscream-14.flac";
-import hit15 from "./slightscream-15.flac";
-import death from "./wilhelm.mp3";
+import pizza from "./images/pizza.png";
+import steak from "./images/steak.png";
+import hit1 from "./audio/slightscream-01.flac";
+import hit2 from "./audio/slightscream-02.flac";
+import hit3 from "./audio/slightscream-03.flac";
+import hit4 from "./audio/slightscream-04.flac";
+import hit5 from "./audio/slightscream-05.flac";
+import hit6 from "./audio/slightscream-06.flac";
+import hit7 from "./audio/slightscream-07.flac";
+import hit8 from "./audio/slightscream-08.flac";
+import hit9 from "./audio/slightscream-09.flac";
+import hit10 from "./audio/slightscream-10.flac";
+import hit11 from "./audio/slightscream-11.flac";
+import hit12 from "./audio/slightscream-12.flac";
+import hit13 from "./audio/slightscream-13.flac";
+import hit14 from "./audio/slightscream-14.flac";
+import hit15 from "./audio/slightscream-15.flac";
+import death from "./audio/wilhelm.mp3";
 
 class PracticeMode extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			enemyCurHealth: 500,
+			enemyCurHealth: 50,
 			enemyMaxHealth: 500,
-			playerCurHealth: 500,
+			playerCurHealth: 50,
 			playerMaxHealth: 500
 		};
 		this.onDeath = this.onDeath.bind(this);
