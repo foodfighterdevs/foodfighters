@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Player from './components/Player.js';
 import './PracticeMode.css';
@@ -21,6 +22,15 @@ import hit14 from './slightscream-14.flac';
 import hit15 from './slightscream-15.flac';
 import death from './wilhelm.mp3';
 
+=======
+import React from "react";
+import Player from "./components/Player.js";
+import "./PracticeMode.css";
+import KeyPrompt from "./KeyPrompt";
+import pizza from "./images/pizza.png";
+import steak from "./images/steak.png";
+import audio from "./audio/audio.js";
+>>>>>>> f47c384cd65b3eb6b44139dc420c6de94e5faa93
 class PracticeMode extends React.Component {
 	constructor(props) {
 		super(props);
@@ -28,6 +38,7 @@ class PracticeMode extends React.Component {
 			enemyCurHealth: 500,
 			enemyMaxHealth: 500,
 			playerCurHealth: 500,
+<<<<<<< HEAD
 			playerMaxHealth: 500,
 			playerSpecial: 0,
 			enemySpecial: 0
@@ -51,12 +62,17 @@ class PracticeMode extends React.Component {
 		this.hit15 = new Audio(hit15);
 
 		this.death = new Audio(death);
+=======
+			playerMaxHealth: 500
+		};		
+>>>>>>> f47c384cd65b3eb6b44139dc420c6de94e5faa93
 		this.change_enemy_health = this.change_enemy_health.bind(this);
 		this.change_player_health = this.change_player_health.bind(this);
 		this.usePlayerSpecial = this.usePlayerSpecial.bind(this);
 		this.useEnemySpecial = this.useEnemySpecial.bind(this);
 	}
 
+<<<<<<< HEAD
 	onHit() {
 		let choice = Math.floor(Math.random() * 15) + 1; // 0.5 second to 1.5 seconds
 		switch (choice) {
@@ -114,6 +130,8 @@ class PracticeMode extends React.Component {
 		this.death.play();
 	}
 
+=======
+>>>>>>> f47c384cd65b3eb6b44139dc420c6de94e5faa93
 	change_enemy_health(modification) {
 		this.setState({
 			enemySpecial: this.state.enemySpecial + 20
@@ -127,12 +145,12 @@ class PracticeMode extends React.Component {
 			this.setState({
 				enemyCurHealth: 0
 			});
-			this.onDeath();
+			audio.onDeath();
 		} else {
 			this.setState({
 				enemyCurHealth: this.state.enemyCurHealth + modification
 			});
-			this.onHit();
+			audio.onHit();
 		}
 	}
 	change_player_health(modification) {
@@ -147,12 +165,12 @@ class PracticeMode extends React.Component {
 			this.setState({
 				playerCurHealth: 0
 			});
-			this.onDeath();
+			audio.onDeath();
 		} else {
 			this.setState({
 				playerCurHealth: this.state.playerCurHealth + modification
 			});
-			this.onHit();
+			audio.onHit();
 		}
 	}
 	usePlayerSpecial() {
