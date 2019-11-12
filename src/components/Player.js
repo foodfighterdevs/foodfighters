@@ -1,5 +1,6 @@
 import React from 'react';
 import Bar from './HealthBar.js';
+import SpecialBar from './SpecialBar';
 
 class Player extends React.Component {
 	constructor(props) {
@@ -17,7 +18,7 @@ class Player extends React.Component {
 					maxHealth={this.props.maxHealth}
 				/>
 				<Image sprite={this.props.sprite} />
-				<Special />
+				<SpecialBar special={this.props.special} />
 			</div>
 		);
 	}
@@ -27,10 +28,6 @@ function Image(props) {
 	//let effect = ""
 
 	return <img src={props.sprite} alt="Your Dish!" />;
-}
-
-function Special(props) {
-	return <div>SPECIAL</div>;
 }
 
 export default Player;

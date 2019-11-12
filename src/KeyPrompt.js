@@ -5,34 +5,34 @@ class KeyPrompt extends React.Component {
 		super(props);
 		this.state = {
 			letterArray: [
-				'A',
-				'B',
-				'C',
-				'D',
-				'E',
-				'F',
-				'G',
-				'H',
-				'I',
-				'J',
-				'K',
-				'L',
-				'M',
-				'N',
-				'O',
-				'P',
-				'Q',
-				'R',
-				'S',
-				'T',
-				'U',
-				'V',
-				'W',
-				'X',
-				'Y',
-				'Z'
+				'a',
+				'b',
+				'c',
+				'd',
+				'e',
+				'f',
+				'g',
+				'h',
+				'i',
+				'j',
+				'k',
+				'l',
+				'm',
+				'n',
+				'o',
+				'p',
+				'q',
+				'r',
+				's',
+				't',
+				'u',
+				'v',
+				'w',
+				'x',
+				'y',
+				'z'
 			],
-			letterShown: 3,
+			letterShown: '3',
 			enemy_move: null
 		};
 	}
@@ -41,11 +41,11 @@ class KeyPrompt extends React.Component {
 		this.countdown();
 	}
 	countdown() {
-		this.setState({ letterShown: 3 });
+		this.setState({ letterShown: '3' });
 		setTimeout(() => {
-			this.setState({ letterShown: 2 });
+			this.setState({ letterShown: '2' });
 			setTimeout(() => {
-				this.setState({ letterShown: 1 });
+				this.setState({ letterShown: '1' });
 				setTimeout(() => {
 					this.setState({
 						letterShown: this.state.letterArray[Math.floor(Math.random() * 26)]
@@ -58,8 +58,18 @@ class KeyPrompt extends React.Component {
 	}
 	handle_player_prompt_press(e) {
 		// Happens to be secure against users matching countdown numbers
-		if (
-			e.key.toUpperCase() === this.state.letterShown &&
+		if (e.key === this.state.letterShown.toUpperCase()) {
+			this.props.usePlayerSpecial();
+			if (this.props.enemyCurHealth !== 0) {
+				this.countdown();
+			} else {
+				setTimeout(() => {
+					alert('Good job');
+				}, 3000); // Based on health-bar-red css transition time
+			}
+			clearTimeout(this.state.enemy_move);
+		} else if (
+			e.key === this.state.letterShown &&
 			this.props.enemyCurHealth !== 0
 		) {
 			this.props.changeEnemyHealth(-50);
@@ -79,7 +89,12 @@ class KeyPrompt extends React.Component {
 		this.setState({
 			enemy_move: setTimeout(() => {
 				//if (this.props.playerCurHealth !== 0) {
-				this.props.changePlayerHealth(-50);
+				// Do enemy special if possible
+				if (this.props.enemySpecial >= 125) {
+					this.props.useEnemySpecial();
+				} else {
+					this.props.changePlayerHealth(-50);
+				}
 				if (this.props.playerCurHealth !== 0) {
 					this.countdown();
 				} else {
