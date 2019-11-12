@@ -25,9 +25,9 @@ class PracticeMode extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			enemyCurHealth: 50,
+			enemyCurHealth: 500,
 			enemyMaxHealth: 500,
-			playerCurHealth: 50,
+			playerCurHealth: 500,
 			playerMaxHealth: 500
 		};
 		this.onDeath = this.onDeath.bind(this);
