@@ -1,36 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import Player from './components/Player.js';
 import './PracticeMode.css';
 import KeyPrompt from './KeyPrompt';
-import pizza from './pizza.png';
-import steak from './steak.png';
-import hit1 from './slightscream-01.flac';
-import hit2 from './slightscream-02.flac';
-import hit3 from './slightscream-03.flac';
-import hit4 from './slightscream-04.flac';
-import hit5 from './slightscream-05.flac';
-import hit6 from './slightscream-06.flac';
-import hit7 from './slightscream-07.flac';
-import hit8 from './slightscream-08.flac';
-import hit9 from './slightscream-09.flac';
-import hit10 from './slightscream-10.flac';
-import hit11 from './slightscream-11.flac';
-import hit12 from './slightscream-12.flac';
-import hit13 from './slightscream-13.flac';
-import hit14 from './slightscream-14.flac';
-import hit15 from './slightscream-15.flac';
-import death from './wilhelm.mp3';
-
-=======
-import React from "react";
-import Player from "./components/Player.js";
-import "./PracticeMode.css";
-import KeyPrompt from "./KeyPrompt";
-import pizza from "./images/pizza.png";
-import steak from "./images/steak.png";
-import audio from "./audio/audio.js";
->>>>>>> f47c384cd65b3eb6b44139dc420c6de94e5faa93
+import pizza from './images/pizza.png';
+import steak from './images/steak.png';
+import audio from './audio/audio.js';
 class PracticeMode extends React.Component {
 	constructor(props) {
 		super(props);
@@ -38,41 +12,18 @@ class PracticeMode extends React.Component {
 			enemyCurHealth: 500,
 			enemyMaxHealth: 500,
 			playerCurHealth: 500,
-<<<<<<< HEAD
 			playerMaxHealth: 500,
 			playerSpecial: 0,
 			enemySpecial: 0
 		};
 		this.onDeath = this.onDeath.bind(this);
 		this.onHit = this.onHit.bind(this);
-		this.hit1 = new Audio(hit1);
-		this.hit2 = new Audio(hit2);
-		this.hit3 = new Audio(hit3);
-		this.hit4 = new Audio(hit4);
-		this.hit5 = new Audio(hit5);
-		this.hit6 = new Audio(hit6);
-		this.hit7 = new Audio(hit7);
-		this.hit8 = new Audio(hit8);
-		this.hit9 = new Audio(hit9);
-		this.hit10 = new Audio(hit10);
-		this.hit11 = new Audio(hit11);
-		this.hit12 = new Audio(hit12);
-		this.hit13 = new Audio(hit13);
-		this.hit14 = new Audio(hit14);
-		this.hit15 = new Audio(hit15);
-
-		this.death = new Audio(death);
-=======
-			playerMaxHealth: 500
-		};		
->>>>>>> f47c384cd65b3eb6b44139dc420c6de94e5faa93
 		this.change_enemy_health = this.change_enemy_health.bind(this);
 		this.change_player_health = this.change_player_health.bind(this);
 		this.usePlayerSpecial = this.usePlayerSpecial.bind(this);
 		this.useEnemySpecial = this.useEnemySpecial.bind(this);
 	}
 
-<<<<<<< HEAD
 	onHit() {
 		let choice = Math.floor(Math.random() * 15) + 1; // 0.5 second to 1.5 seconds
 		switch (choice) {
@@ -130,8 +81,6 @@ class PracticeMode extends React.Component {
 		this.death.play();
 	}
 
-=======
->>>>>>> f47c384cd65b3eb6b44139dc420c6de94e5faa93
 	change_enemy_health(modification) {
 		this.setState({
 			enemySpecial: this.state.enemySpecial + 20
