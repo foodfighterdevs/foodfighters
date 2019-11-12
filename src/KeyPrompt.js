@@ -64,7 +64,14 @@ class KeyPrompt extends React.Component {
 				this.countdown();
 			} else {
 				setTimeout(() => {
-					alert('Good job');
+					swal({
+						title: 'You have won! :)',
+						icon: 'success',
+						animation: true,
+						customClass: {
+							popup: 'animated tada'
+						}
+					});
 				}, 3000); // Based on health-bar-red css transition time
 			}
 			clearTimeout(this.state.enemy_move);
