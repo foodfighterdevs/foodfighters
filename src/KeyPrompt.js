@@ -78,11 +78,11 @@ class KeyPrompt extends React.Component {
 			} else {
 				setTimeout(() => {
 					swal({
-						title: "You have won! :)",
+						title: 'You have won! :)',
 						icon: 'success',
 						animation: true,
 						customClass: {
-						popup: 'animated tada'
+							popup: 'animated tada'
 						}
 					});
 				}, 3000); // Based on health-bar-red css transition time
@@ -107,11 +107,11 @@ class KeyPrompt extends React.Component {
 				} else {
 					setTimeout(() => {
 						swal({
-							title: "You have lost! :(",
+							title: 'You have lost! :(',
 							icon: 'error',
 							animation: true,
 							customClass: {
-							popup: 'animated tada'
+								popup: 'animated tada'
 							}
 						});
 					}, 3000); // Based on health-bar-red css transition time
