@@ -56,52 +56,41 @@ class KeyPrompt extends React.Component {
       }, 1000);
     }, 1000);
   }
+  checkIfPlayerWon() {
+    if (this.props.enemyCurHealth !== 0) {
+      this.countdown();
+    } else {
+      setTimeout(() => {
+        swal({
+          title: "You have won! :)",
+          icon: "success",
+          animation: true,
+          customClass: {
+            popup: "animated tada"
+          }
+        });
+      }, 3000); // Based on health-bar-red css transition time
+    }
+    clearTimeout(this.state.enemy_move);
+  }
   handle_player_prompt_press(e) {
-    if (e.key.match(/[a-z]/i)) {
+    if (e.key.match(/[a-z]/i) && this.props.playerCurHealth > 0) {
       // Happens to be secure against users matching countdown numbers
-      if (
-        e.key === this.state.letterShown.toUpperCase() &&
-        this.props.playerSpecial >= 125
-      ) {
+      if (e.key === this.state.letterShown.toUpperCase()) {
         this.props.usePlayerSpecial();
-        if (this.props.enemyCurHealth !== 0) {
-          this.countdown();
-        } else {
-          setTimeout(() => {
-            alert("Good job");
-          }, 3000); // Based on health-bar-red css transition time
-        }
-        clearTimeout(this.state.enemy_move);
+        this.checkIfPlayerWon();
       } else if (
         e.key === this.state.letterShown &&
         this.props.enemyCurHealth !== 0
       ) {
         this.props.changeEnemyHealth(-50);
-        if (this.props.enemyCurHealth !== 0) {
-          this.countdown();
-        } else {
-          setTimeout(() => {
-            swal({
-              title: "You have won! :)",
-              icon: "success",
-              animation: true,
-              customClass: {
-                popup: "animated tada"
-              }
-            });
-          }, 3000); // Based on health-bar-red css transition time
-        }
-        clearTimeout(this.state.enemy_move);
+        this.checkIfPlayerWon();
       }
     }
   }
   handle_enemy_prompt_press() {
-    //const test = this.props.playerCurHealth;
-    //console.log(test);
     this.setState({
       enemy_move: setTimeout(() => {
-        //if (this.props.playerCurHealth !== 0) {
-        // Do enemy special if possible
         if (this.props.enemySpecial >= 125) {
           this.props.useEnemySpecial();
         } else {
@@ -121,7 +110,6 @@ class KeyPrompt extends React.Component {
             });
           }, 3000); // Based on health-bar-red css transition time
         }
-        //}
       }, Math.floor(Math.random() * 1000) + 500) // 0.5 second to 1.5 seconds
     });
   }
