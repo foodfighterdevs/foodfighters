@@ -59,7 +59,10 @@ class KeyPrompt extends React.Component {
   handle_player_prompt_press(e) {
     if (e.key.match(/[a-z]/i)) {
       // Happens to be secure against users matching countdown numbers
-      if (e.key === this.state.letterShown.toUpperCase()) {
+      if (
+        e.key === this.state.letterShown.toUpperCase() &&
+        this.props.playerSpecial >= 125
+      ) {
         this.props.usePlayerSpecial();
         if (this.props.enemyCurHealth !== 0) {
           this.countdown();
@@ -125,7 +128,7 @@ class KeyPrompt extends React.Component {
   render() {
     return (
       <div>
-        {this.state.letterShown}
+        {this.state.letterShown.toUpperCase()}
         {
           (document.onkeydown = e => {
             this.handle_player_prompt_press(e);
